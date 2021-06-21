@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === 'production') {
 
   // visas srautas nukreipiamas per producijos sukurta index.html
   app.get('*', (req, res) => {
-    res.sendFile(path.join('index.html', { root: rootBuild }));
+    res.sendFile(path.join(rootBuild, 'index.html'));
   });
 }
 
