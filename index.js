@@ -21,9 +21,15 @@ const todoApi = require('./api/todoApi');
 app.use('/', todoApi);
 
 const rootBuild = path.join(__dirname, 'client', 'build');
+
 // pasitikrinti ar musu aplika yra production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(rootBuild));
+
+  // visas srautas nukreipiamas per producijos sukurta index.html
+  app.get('*', (req, res) => {
+    res.sendFile(path.join('index.html', { root: rootBuild }));
+  });
 }
 
 // prisijungimas prie duomenu bazes
