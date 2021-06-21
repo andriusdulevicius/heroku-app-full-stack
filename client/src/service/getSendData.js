@@ -1,6 +1,6 @@
 export default class GetSendData {
   static todoApiUrl = `http://${process.env.HOST || 'localhost'}:${
-    process.env.PORT || 3002
+    process.env.PORT || 5000
   }/api/todos`;
   static reqOptions = {
     mode: 'cors',
