@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "todo-app",
   "version": "1.0.0",
   "description": "Json back en",
   "main": "index.js",
@@ -18,5 +18,8 @@
     "install": "^0.13.0",
     "mongoose": "^5.12.13",
     "npm": "^7.18.1"
+  },
+  "engines": {
+    "node": "15.x"
   }
 }
