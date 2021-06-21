@@ -1,5 +1,5 @@
 export default class GetSendData {
-  static todoApiUrl = `https://${process.env.HEROKU_HOST || 'localhost'}:${
+  static todoApiUrl = `http://${process.env.HEROKU_HOST || 'localhost'}:${
     process.env.PORT || 3002
   }/api/todos`;
   static reqOptions = {
