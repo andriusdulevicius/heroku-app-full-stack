@@ -1,12 +1,15 @@
+// aplikos kintamieji
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 
 const cors = require('cors');
 
 const mongoose = require('mongoose');
-const { mongoDbString } = require('./config/config');
 
-const PORT = 3002;
+// jei bus heroku nustatytas portas mes imsime ji is aplinkos kintamuju
+const PORT = process.env.PORT || 3002;
 
 app.use(cors());
 // middle ware - to get req.body in json
@@ -18,7 +21,7 @@ app.use('/', todoApi);
 
 // prisijungimas prie duomenu bazes
 mongoose
-  .connect(process.env.REACT_APP_MONGO_CONNECT || mongoDbString, {
+  .connect(process.env.MONGO_CONN_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
