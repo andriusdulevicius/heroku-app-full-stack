@@ -24,7 +24,7 @@ export default class GetSendData {
     // asyc await way
 
     try {
-      const resp = await fetch(GetSendData.todoApiUrl, GetSendData.reqOptions);
+      const resp = await fetch(GetSendData.todoApiUrl);
       const data = await resp.json();
       succesCallback(data);
     } catch (err) {
