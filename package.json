@@ -7,6 +7,8 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "front": "npm start --prefix client",
+    "install-f": "npm i --prefix client",
+    "install-b": "npm i",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "M.K",
