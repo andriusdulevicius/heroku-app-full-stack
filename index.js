@@ -12,7 +12,9 @@ const mongoose = require('mongoose');
 // jei bus heroku nustatytas portas mes imsime ji is aplinkos kintamuju
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://todo-mern-js3.herokuapp.com'
+}));
 // middle ware - to get req.body in json
 app.use(express.json());
 
