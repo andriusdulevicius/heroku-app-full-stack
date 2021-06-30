@@ -1,6 +1,5 @@
 export default class GetSendData {
-  
-  static todoApiUrl = 'https://todo-mern-js3.herokuapp.com/api/todos';
+  static todoApiUrl = 'https://todo-full-stack-working.herokuapp.com/api/todos';
   static reqOptions = {
     mode: 'cors',
     cache: 'no-cache',
